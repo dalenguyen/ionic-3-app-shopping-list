@@ -26,3 +26,31 @@ OR
 ```
 ionic lab
 ```
+
+# Troubleshooting
+
+## Firebase Permission Denied
+
+The default rules in the Firebase are:
+
+```
+{
+  "rules": {
+    ".read": "auth != null",
+    ".write": "auth != null"
+  }
+}
+```
+
+You can temporary change them to:
+
+```
+{
+  "rules": {
+    ".read": true,
+    ".write": true
+  }
+}
+```
+
+You better set up an authenticated system for read and write databaes.

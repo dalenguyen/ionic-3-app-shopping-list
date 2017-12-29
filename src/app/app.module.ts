@@ -8,6 +8,7 @@ import { AngularFireDatabaseModule } from 'angularfire2/database'
 
 import { MyApp } from './app.component';
 import { ENV } from '../config/env';
+import { ShoppingListService } from '../services/shopping-list/shopping-list.service';
 
 @NgModule({
   declarations: [
@@ -26,7 +27,8 @@ import { ENV } from '../config/env';
   providers: [
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler}
+    {provide: ErrorHandler, useClass: IonicErrorHandler},
+    ShoppingListService
   ]
 })
 export class AppModule {}

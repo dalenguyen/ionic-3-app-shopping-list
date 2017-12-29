@@ -13,6 +13,10 @@ npm install
 npm install --only=dev
 ```
 
+# Configure Firebase ENV
+
+You need to have a firebase account, then change the name of the file: src/config/env-example.ts to env.ts with your firebase configuration info.
+
 # Start Project
 
 ```

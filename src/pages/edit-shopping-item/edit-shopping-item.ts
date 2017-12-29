@@ -39,6 +39,13 @@ export class EditShoppingItemPage {
     });
   }
 
+  removeItem(item: Item){
+    this.shopping.removeItem(item).then(() => {
+      this.toast.show(`${item.name} removed!`);
+      this.navCtrl.setRoot('HomePage');
+    })
+  }
+
   ionViewDidLoad() {
     console.log('ionViewDidLoad EditShoppingItemPage');
   }
